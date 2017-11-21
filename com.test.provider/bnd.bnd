@@ -1,0 +1,8 @@
+-buildpath: \
+	com.test.api;version=latest,\
+	osgi.cmpn,\
+	osgi.core,\
+	osgi.annotation,\
+	org.apache.felix.gogo.runtime
+Export-Package: com.test.provider
+Bundle-Version: 1.0.0.${tstamp}

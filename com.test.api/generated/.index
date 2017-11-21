@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1511298304421" name="com.test.api" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.test.api"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="efd3f59e70ba2894d9667e3835c2001470039a8577fa389339790c47c6b50e7f"/>
+      <attribute name="url" value="generated/com.test.api.jar"/>
+      <attribute name="size" type="Long" value="2367"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.test.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.test.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.test.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.test.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="bndtools.workspace">
+      <attribute name="bndtools.workspace" value="file:/Users/sonalisahu/Documents/osgi-demo"/>
+      <attribute name="project.path" value="/com.test.api"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+</repository>

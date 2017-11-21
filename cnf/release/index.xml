@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<repository increment="1511298304000" name="Release" xmlns="http://www.osgi.org/xmlns/repository/v1.0.0">
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.test.api"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="cd9b465bfe583e988c80c43ece2752ea87124da1dedbb9d46a98464d298df8ca"/>
+      <attribute name="url" value="com.test.api/com.test.api-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="2367"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.test.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.test.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.test.api"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.test.api"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.test.command"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="5669c0db22e959988d99cbfc80be5bb27d7a1ca4fd9026fef2703098b3f4192b"/>
+      <attribute name="url" value="com.test.command/com.test.command-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="3585"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.test.command"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.test.command"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.test.command.StringConvertorCommand"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.test.command.StringConvertorCommand"/>
+      <attribute name="osgi.command.function" type="List&lt;String&gt;" value="invert,upper,lower,length,random"/>
+      <attribute name="osgi.command.scope" value="test"/>
+      <directive name="uses" value="com.test.command"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.test.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.test.api.StringConvertor)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.test.api.StringConvertor)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.test.provider"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="a2f099f03456065abebf073d52372771697a57f6c2fab64ea46afe93f75ad17c"/>
+      <attribute name="url" value="com.test.provider/com.test.provider-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="4449"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.test.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.test.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.wiring.package">
+      <attribute name="osgi.wiring.package" value="com.test.provider"/>
+      <attribute name="version" type="Version" value="1.0.0"/>
+      <attribute name="bundle-symbolic-name" value="com.test.provider"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+      <directive name="uses" value="com.test.api"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.test.api.StringConvertor"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="com.test.api.StringConvertor"/>
+      <directive name="uses" value="com.test.api"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.test.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+  <resource>
+    <capability namespace="osgi.identity">
+      <attribute name="osgi.identity" value="com.test.web"/>
+      <attribute name="type" value="osgi.bundle"/>
+      <attribute name="version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.content">
+      <attribute name="osgi.content" value="000a1c24a4b5eb3580680701289168338a858282392a5fe50fceb11bef934c92"/>
+      <attribute name="url" value="com.test.web/com.test.web-1.0.0.jar"/>
+      <attribute name="size" type="Long" value="4558"/>
+      <attribute name="mime" value="application/vnd.osgi.bundle"/>
+    </capability>
+    <capability namespace="osgi.wiring.bundle">
+      <attribute name="osgi.wiring.bundle" value="com.test.web"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.wiring.host">
+      <attribute name="osgi.wiring.host" value="com.test.web"/>
+      <attribute name="bundle-version" type="Version" value="1.0.0.201711212105"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="javax.servlet.Servlet"/>
+    </capability>
+    <capability namespace="osgi.service">
+      <attribute name="objectClass" type="List&lt;String&gt;" value="javax.servlet.Servlet"/>
+      <attribute name="osgi.http.whiteboard.servlet.pattern" value="/string"/>
+      <directive name="uses" value="javax.servlet"/>
+    </capability>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(&amp;(osgi.wiring.package=com.test.api)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet)"/>
+    </requirement>
+    <requirement namespace="osgi.wiring.package">
+      <directive name="filter" value="(osgi.wiring.package=javax.servlet.http)"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.implementation">
+      <directive name="filter" value="(&amp;(osgi.implementation=osgi.http)(version&gt;=1.0)(!(version&gt;=2.0)))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.test.api.StringConvertor)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.contract">
+      <attribute name="osgi.contract" value="JavaServlet"/>
+      <directive name="filter" value="(&amp;(osgi.contract=JavaServlet)(version=3.1.0))"/>
+    </requirement>
+    <requirement namespace="osgi.ee">
+      <directive name="filter" value="(&amp;(osgi.ee=JavaSE)(version=1.8))"/>
+    </requirement>
+    <requirement namespace="osgi.service">
+      <directive name="filter" value="(objectClass=com.test.api.StringConvertor)"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+    <requirement namespace="osgi.extender">
+      <directive name="filter" value="(&amp;(osgi.extender=osgi.component)(version&gt;=1.3.0)(!(version&gt;=2.0.0)))"/>
+      <directive name="effective" value="active"/>
+    </requirement>
+  </resource>
+</repository>
