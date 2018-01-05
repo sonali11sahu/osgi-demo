@@ -1,11 +1,6 @@
 # osgi-demo
 OSGi Basic Implementations and Concepts
 
-
-Demo Application by Sonali Sahu for Liferay Interview
-November 21, 2017
-
-
 Table of Contents
 Requirements	1
 Introduction to OSGi Basics	2
